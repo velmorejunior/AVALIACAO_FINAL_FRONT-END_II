@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Recados</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <h1>Meus recados</h1>
+    <main>
+        <div class="cabecalho">
+            <form id="recado">
+                <input type="text" name="descricao" id="descricao" placeholder="Descrição (Max 40 caracteres)" autocomplete="off" maxlength="40"/>
+                <input type="text" name="detalhamento" id="detalhamento" placeholder="Detalhamento (Max 70 caracteres)" autocomplete="off" maxlength="70"/>
+                <button id="btn-salva-recado" type="submit">Salvar</button>
+                <a href="./index.html">Sair</a>                
+            </form>
+        </div>
+
+        <table>
+            <thead class="cabecalho-tabela">
+                <tr>
+                    <td id="id-tabela">#</td>
+                    <td id="descricao-tabela">DESCRIÇÃO</td>
+                    <td id="detalhe-tabela">DETALHAMENTO</td>
+                    <td id="botao-acao">AÇÃO</td>            
+                </tr>
+            </thead>
+            <tbody id="corpo-tabela"></tbody>
+        </table>
+    </main>
+    <script src="./js/home.js"></script>
+</body>
+</html>

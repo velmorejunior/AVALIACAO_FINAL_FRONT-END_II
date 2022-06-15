@@ -1,0 +1,82 @@
+body{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:linear-gradient( #a1d808b3 0%,#a1d808b3(255,255,255,.7) 100%), url(../images/bh.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+#container{
+    display: flex;
+    height: 100%;        
+}
+
+.button_login{
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    background: #0d354b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.section{
+    background-image:linear-gradient( #a1d808b3(255,255,255,.7) 0%,#a1d808b3(255,255,255,.7) 100%), url(../images/pampulha.jpg);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;   
+    margin: 90px;
+    border-radius: 3%;
+}
+
+.section2{
+    background-image:linear-gradient( rgba(255,255,255,.7) 0%,rgba(255,255,255,.7) 100%), url(../images/pampulha.jpg);
+    background-color: #2478a5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;   
+    margin: 90px;
+    border-radius: 3%;
+}
+
+.section:first-child{
+    background-color: #2478a5;
+    border-radius: 3%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+}
+
+.section-login{    
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+}
+
+#login input{
+    width: calc(100%+100px);
+    font-size: 15pt;
+}
+
+#link-criar-conta {
+    color: #2291cd;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;  
+}
+
