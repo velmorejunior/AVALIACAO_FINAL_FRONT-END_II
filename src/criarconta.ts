@@ -4,6 +4,12 @@ const inputUsuario = document.getElementById("username") as HTMLInputElement;
 const inputSenha = document.getElementById("password") as HTMLInputElement;
 const inputNovaSenha = document.getElementById("newpassword") as HTMLInputElement;
 
+interface inovaConta {
+    username: string;
+    password: string;
+    newpassword: string;
+}
+
 function recuperaConta(){
     const contas = JSON.parse(localStorage.getItem("contas") || "[]") as Array<any>;
     return contas;
@@ -25,7 +31,7 @@ function criarConta(){
         return
     }
 
-    if (testaSenha(inputSenha, inputNovaSenha) == true){
+    if (inputSenha.value === inputNovaSenha.value){
         salvaConta();
     } else{
             alert("As senhas não conferem");
@@ -33,19 +39,19 @@ function criarConta(){
 }
 
 function salvaConta() {  
-    const username = inputUsuario;
-    const password = inputSenha;
-    const newpassword = inputNovaSenha;
-    const novaConta = {
+    const username = inputUsuario.value;
+    const password = inputSenha.value;
+    const newpassword = inputNovaSenha.value;
+    const novaConta:inovaConta = {
         username: username,
         password: password,
         newpassword: newpassword,
     };
-    gravarNaStorage(novaConta);
+    gravarContaStorage(novaConta);
     location.href = './index.html'
 }
 
-function gravarNaStorage(conta: HTMLInputElement){
+function gravarContaStorage(conta: inovaConta){
   const lista = recuperaConta()
   lista.push(conta)
   localStorage.setItem("contas",JSON.stringify(lista));

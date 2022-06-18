@@ -99,4 +99,23 @@ main {
     border-radius: 4px;
   }
 
+  .titulo {
+    text-shadow: 0px 0px 10px rgb(244, 255, 247, 0.6);
+    letter-spacing: 30px;
+    animation-name: titulo;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes titulo {
+    0% {
+      transform: translateX(-500px);
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 100%;
+      transform: translateX(0);
+    }
+  }
+
   

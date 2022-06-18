@@ -17,7 +17,7 @@ function criarConta() {
         alert("usuário já cadastrado.");
         return;
     }
-    if (testaSenha(inputSenha, inputNovaSenha) == true) {
+    if (inputSenha.value === inputNovaSenha.value) {
         salvaConta();
     }
     else {
@@ -25,18 +25,18 @@ function criarConta() {
     }
 }
 function salvaConta() {
-    const username = inputUsuario;
-    const password = inputSenha;
-    const newpassword = inputNovaSenha;
+    const username = inputUsuario.value;
+    const password = inputSenha.value;
+    const newpassword = inputNovaSenha.value;
     const novaConta = {
         username: username,
         password: password,
         newpassword: newpassword,
     };
-    gravarNaStorage(novaConta);
+    gravarContaStorage(novaConta);
     location.href = './index.html';
 }
-function gravarNaStorage(conta) {
+function gravarContaStorage(conta) {
     const lista = recuperaConta();
     lista.push(conta);
     localStorage.setItem("contas", JSON.stringify(lista));

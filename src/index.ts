@@ -6,6 +6,9 @@ function entrarNoSistema(){
     const inputSenha = document.getElementById('password') as HTMLInputElement;  
     const usuarioDB = contas.find((usuario) => usuario.username === inputUsuario && usuario.password === inputSenha)       
     
+    alert(contas)
+    alert(usuarioDB)
+
     if(!usuarioDB){
         alert("Usuário nao cadastrado ou senha inválida")
         
